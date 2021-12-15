@@ -1,0 +1,47 @@
+server:
+  port: 9090
+  
+eureka:   
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+  endpoint:
+    health:
+      show-details: ALWAYS
+      
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: customer-management
+        uri: lb://CUSTOMER-MANAGEMENT
+        predicates:
+        - Path=/customer/**
+      - id: product-catalogue
+        uri: lb://PRODUCT-CATALOGUE
+        predicates:
+        - Path=/product/**
+      - id: delivery-management
+        uri: lb://DELIVERY-MANAGEMENT
+        predicates:
+        - Path=/delivery/**
+      - id: inventory-management
+        uri: lb://INVENTORY-MANAGEMENT
+        predicates:
+        - Path=/inventory/**
+      - id: order-management
+        uri: lb://ORDER-MANAGEMENT
+        predicates:
+        - Path=/order/**
