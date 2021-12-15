@@ -27,7 +27,7 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:sqlserver://10.119.162.25;databaseName=inventory
-    username: "{cipher}19772d4c5b9cd952aeb01285b4831749fcb15e7489097fbcab80af28c5f12f29"
-    password: "{cipher}23629c6a03af67c5bc1c813f2b6a92db0b68451b474e6f26f36e1d789dceb26d"
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    #url: jdbc:sqlserver://10.119.162.25;databaseName=inventory
+    url: jdbc:mysql://localhost:3306/inventory?createDatabaseIfNotExist=true
+    username: "{cipher}51123f6544187d5187ff252a981dee36bde60da30086867ac0d7883a5bfa2cee"
+    password: "{cipher}51123f6544187d5187ff252a981dee36bde60da30086867ac0d7883a5bfa2cee"
