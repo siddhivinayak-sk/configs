@@ -28,7 +28,8 @@ spring:
   datasource:
 #    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
 #    url: jdbc:sqlserver://10.119.162.25;databaseName=customer
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+#    driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/customer
     username: "{cipher}51123f6544187d5187ff252a981dee36bde60da30086867ac0d7883a5bfa2cee"
     password: "{cipher}51123f6544187d5187ff252a981dee36bde60da30086867ac0d7883a5bfa2cee"
