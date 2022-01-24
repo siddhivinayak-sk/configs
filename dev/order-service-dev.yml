@@ -23,7 +23,7 @@ management:
       
 spring:
   jpa:
-    generate-ddl: true
+    #generate-ddl: true
     hibernate:
       ddl-auto: update
   datasource:
