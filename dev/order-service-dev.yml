@@ -32,3 +32,8 @@ spring:
     username: "{cipher}51123f6544187d5187ff252a981dee36bde60da30086867ac0d7883a5bfa2cee"
     password: "{cipher}51123f6544187d5187ff252a981dee36bde60da30086867ac0d7883a5bfa2cee"
     driver-class-name: com.mysql.cj.jdbc.Driver
+    
+eventuate:
+    database: 
+        schema: eventuate
+
