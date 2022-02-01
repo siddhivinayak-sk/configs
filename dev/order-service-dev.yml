@@ -39,7 +39,7 @@ spring:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
-        hibernate.default_schema: order_schema
+        hibernate.default_schema: eventuate
         hibernate.format_sql: true
     hibernate:
       ddl-auto: update
