@@ -39,7 +39,7 @@ spring:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
-        hibernate.default_schema: order
+        hibernate.default_schema: order_schema
         hibernate.format_sql: true
     hibernate:
       ddl-auto: update
@@ -47,7 +47,7 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/eventuateSaga?useSSL=false
+    url: jdbc:postgresql://localhost:5432/eventuate_saga_db?useSSL=false
     username: postgres
     password: admin
     
