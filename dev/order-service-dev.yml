@@ -36,12 +36,11 @@ management:
     
 spring:
   jpa:
-    hibernate:
-        ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
-        hibernate.default_schema: eventuate
+        hibernate.default_schema: order
     hibernate:
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   datasource:

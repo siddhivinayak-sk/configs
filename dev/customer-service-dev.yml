@@ -38,8 +38,10 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
-        hibernate.default_schema: eventuate
+        hibernate.default_schema: customer
     hibernate:
+    hibernate:
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   datasource:
