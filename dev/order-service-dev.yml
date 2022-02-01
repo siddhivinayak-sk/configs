@@ -36,6 +36,8 @@ management:
     
 spring:
   jpa:
+    hibernate:
+        ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
         hibernate.default_schema: eventuate
