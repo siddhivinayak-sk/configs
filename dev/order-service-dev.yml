@@ -54,4 +54,10 @@ spring:
 eventuate:
     database: 
         schema: eventuate
+        
+# ActiveMQ Properties
+activemq:
+  url: tcp://localhost:61616
+  user: admin
+  password: admin
 
